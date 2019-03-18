@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Questionnaire</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="survey.css">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="survey.js"></script>
+
+<body>
+
+<span id="intr">Every question is mandatory and an error message will appear if a question is not answered.</span>
+<div id="content">
+
+<p id="questionNumber"><p>
+
+<div id="Q0">
+	<p><span class="blink_me">Welcome to this survey!</span> <br/>It will take no more than a couple of minutes to complete. When you are ready please click  'Next'.</p>
+</div>
+
+<div id="Q1">
+	<p>Please select your gender.</p>
+	<label><input type="radio" class="Q1row" id="Q1row1">Male</input></label><br/>
+	<label><input type="radio" class="Q1row" id="Q1row2">Female</input></label>
+</div>
+
+<div id="Q2">
+	<p>Please tell us your exact age.</p>
+	<input type="number" id="age"></input>
+</div>
+
+<div id="Q3">
+	<p>Imagine you are in a store. What would you buy?</p>
+	<p style="font-weight: normal;"><i>Please select all that apply.</i></p>
+		<label><input type="checkbox" class="Q3row">Milk</input></label><br/>
+		<label><input type="checkbox" class="Q3row">TicTac</input></label><br/>
+		<label><input type="checkbox" class="Q3row">Soda</input></label><br/>
+		<label><input type="checkbox" class="Q3row">Bottled Water</input></label><br/>
+		<label><input type="checkbox" class="Q3row">Chocolate</input></label><br/>
+	<label><input type="checkbox" class="Q3row" id="exclusive">None of these</input></label>
+</div>
+
+<div id="Q4">
+	<p>Including yourself please select how many family members you have living in your household.</p>
+	<select>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4+</option>
+	</select>
+</div>
+
+<div id="Q5">
+	<p>What is the name of your best friend?</p>
+	<input type="text" id="Q5txt"></input>
+</div>
+
+<div id="Q6">
+	<p id="Q6Piped"></p>
+	<p><i>Please be as descriptive as possible.</i></p>
+	<textarea id="Q6txt"></textarea>
+</div>
+
+<div id="Q7">
+	<p>Please select how much you like each product.</p>
+	<table style="width:100%">
+	  <tr>
+		<th></th>	<th>Dislike Strongly</th>	<th>Dislike Somewhat</th>	<th>Neither like nor dislike</th>	<th>Like somewhat</th>	<th>Like a lot</th>
+	  </tr>
+	  <tr>
+		<td>Coca Cola</td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>
+	  </tr>
+	  <tr>
+		<td>Fanta</td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>
+	  </tr>
+	  <tr>
+		<td>Sprite</td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>	<td><input class="Q7row" type="radio"></input></td>
+	  </tr>
+	</table><br/>
+	<input type="checkbox" id="clear">Clear</input>
+</div>
+
+<p id="Error"></p>
+<p id="Terminate">Terminate.<br/> Thank you, these are all the questions we have for you today.</p>
+<p id="Complete"><span class="blink_me">Complete.</span><br/> Thank you, these are all the questions we have for you today.</p>
+
+<button>Next</button>
+
+</div>
+
+
+</body>
+</html>
